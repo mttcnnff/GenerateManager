@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}Matter - Account Settings{% endblock %}
+
+{% block page_content %}
+    <div class="page-header">
+        <h1>Your Account</h1>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <h2>Username <small>{{ current_user.username }}</small></h2>
+            <a href="{{ url_for('auth.change_username') }}" class="btn btn-success">Change Username</a>
+        </div>
+        <hr>
+        <div class="row">
+            <h2>Email <small>{{ current_user.email }}</small></h2>
+            <a href="{{ url_for('auth.change_email_request') }}" class="btn btn-success">Change Email</a>
+        </div>
+        <hr>
+        <div class="row">
+            <h2>Password</h2>
+            <a href="{{ url_for('auth.change_password') }}" class="btn btn-danger">Change Password</a>
+        </div>
+    </div>
+{% endblock %}
+

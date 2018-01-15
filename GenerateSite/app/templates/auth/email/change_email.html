@@ -1,0 +1,9 @@
+<p>Dear {{ user.username }},</p>
+<p>Hello from <b>Matter</b>!</p>
+<p>We heard you needed to change your email!</p>
+<p><a href="{{ url_for('auth.change_email', token=token, _external=True) }}">Click Here</a> to reset it.</p>
+<p>Alternatively, you can paste the following link in your browser's address bar:</p>
+<p>{{ url_for('auth.change_email', token=token, _external=True) }}</p>
+<p>Sincerely,</p>
+<p>Matt</p>
+<p><small>Note: I don't read emails sent to this address, so don't bother me with them.</small></p>

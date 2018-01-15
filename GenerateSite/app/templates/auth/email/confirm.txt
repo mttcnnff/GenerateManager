@@ -1,0 +1,13 @@
+Dear {{ user.username }},
+
+Welcome to Matter!
+
+To confirm your account please click on the following link:
+
+{{ url_for('auth.confirm', token=token, _external=True) }}
+
+Sincerely,
+
+Matt
+
+Note: I don't read emails sent to this address, so don't bother me with them.
