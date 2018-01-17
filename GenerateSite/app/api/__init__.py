@@ -9,4 +9,4 @@ api_bp = Blueprint('api', __name__)
 api = Api(api_bp)                               # Create API object
 api.route = types.MethodType(api_route, api)    # Add decorator
 
-from . import routes, Members
+from . import routes, Members, orders
