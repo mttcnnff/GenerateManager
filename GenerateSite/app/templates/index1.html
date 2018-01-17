@@ -33,27 +33,17 @@
             </div>
         </md-toolbar>
         <md-content layout="column" flex>
-            <div flex="none" layout-padding layout="row" layout-align="center">
-                <div layout="column" flex="50">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim sed magni corporis optio ex laboriosam minus accusamus consequatur praesentium impedit ipsum, quo delectus, saepe reprehenderit ea ratione, id, doloribus in?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis deserunt pariatur aliquam incidunt harum, saepe, aspernatur consequuntur consequatur laborum deleniti! Placeat deleniti aut debitis voluptatum accusamus quas delectus. Sequi, minus.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga molestias voluptatem culpa nobis at assumenda? Unde doloremque, vel, rerum eos illo cum obcaecati molestias, sapiente velit repellat aliquam mollitia numquam.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga velit amet non iusto impedit dignissimos placeat, quibusdam in autem omnis sed mollitia adipisci dicta, et eos aut deserunt eius quod?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dignissimos rerum at maxime ad culpa obcaecati expedita labore architecto vel aliquid, cum temporibus accusantium excepturi dolorem vitae, corporis quidem ullam.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, ratione provident. Eveniet tempora reiciendis, doloremque veniam laborum porro, neque ipsum, quia magnam nemo voluptate, suscipit quam? Dolor dolorem, assumenda sequi?
-                    </p>
-                </div>
+            <div layout="row" layout-align="center" layout-wrap>
+                <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch layout-align="center">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Card with image</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-lg card-media"></div>
+                        </md-card-title-media>
+                    </md-card-title>
+                </md-card>
             </div>
         </md-content>
     </div>
