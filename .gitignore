@@ -1,0 +1,7 @@
+GenerateSite/__pycache__/*
+GenerateSite/migrations/*
+**/.DS_Store
+.idea/*
+migrations/*
+**/__pycache__
+**.sqlite

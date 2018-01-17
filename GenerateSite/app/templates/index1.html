@@ -1,0 +1,65 @@
+
+<!doctype HTML>
+<html lang="en" ng-app="GenerateManager">
+
+<head>
+    <title>AngularJS Flask App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.js"></script>
+    <script type="text/javascript" src={{  url_for('static', filename='app.js') }}></script>
+</head>
+
+<body ng-controller="myCtrl" layout="row" layout-fill>
+{% raw %}
+    <div layout="column" layout-fill>
+        <md-toolbar>
+
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Home" style="height:48px;width:48px">
+                    <md-icon md-svg-src='static/assets/gen_white.svg' style="height:36px;width:36px"></md-icon>
+                </md-button>
+                <h2 md-truncate flex>Generate Manager</h2>
+
+                <i class="material-icons">menu</i>
+            </div>
+        </md-toolbar>
+        <md-content layout="column" flex>
+            <div flex="none" layout-padding layout="row" layout-align="center">
+                <div layout="column" flex="50">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim sed magni corporis optio ex laboriosam minus accusamus consequatur praesentium impedit ipsum, quo delectus, saepe reprehenderit ea ratione, id, doloribus in?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis deserunt pariatur aliquam incidunt harum, saepe, aspernatur consequuntur consequatur laborum deleniti! Placeat deleniti aut debitis voluptatum accusamus quas delectus. Sequi, minus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga molestias voluptatem culpa nobis at assumenda? Unde doloremque, vel, rerum eos illo cum obcaecati molestias, sapiente velit repellat aliquam mollitia numquam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga velit amet non iusto impedit dignissimos placeat, quibusdam in autem omnis sed mollitia adipisci dicta, et eos aut deserunt eius quod?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dignissimos rerum at maxime ad culpa obcaecati expedita labore architecto vel aliquid, cum temporibus accusantium excepturi dolorem vitae, corporis quidem ullam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, ratione provident. Eveniet tempora reiciendis, doloremque veniam laborum porro, neque ipsum, quia magnam nemo voluptate, suscipit quam? Dolor dolorem, assumenda sequi?
+                    </p>
+                </div>
+            </div>
+        </md-content>
+    </div>
+{% endraw %}
+</body>
+
+</html>
+
+

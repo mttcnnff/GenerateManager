@@ -3,6 +3,7 @@ from . import login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask_login import UserMixin, AnonymousUserMixin
+from .json_handler import OutputMixin
 from flask import current_app
 
 class Permission:
@@ -12,7 +13,16 @@ class Permission:
     MODERATE_COMMENTS = 0x08
     ADMINISTER = 0x08
 
-class Role(db.Model):
+class MemberModel(OutputMixin, db.Model):
+    __tablename__='members'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64))
+    email = db.Column(db.String(64), unique=True, index=True)
+
+    def __repr__(self):
+        return '<Member %r>' % self.email
+
+class Role(OutputMixin, db.Model):
     __tablename__='roles'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), unique=True)
@@ -44,7 +54,7 @@ class Role(db.Model):
     def __repr__(self):
         return '<Role %r>' % self.name
 
-class User(UserMixin, db.Model):
+class User(OutputMixin, UserMixin, db.Model):
     __tablename__='users'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(64), unique=True, index=True)
