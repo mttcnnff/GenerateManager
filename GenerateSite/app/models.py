@@ -54,6 +54,25 @@ class Role(OutputMixin, db.Model):
     def __repr__(self):
         return '<Role %r>' % self.name
 
+
+class OrderModel(OutputMixin, db.Model):
+    __tablename__='orders'
+    id = db.Column(db.Integer, primary_key=True)
+    product = db.Column(db.String(128))
+    price = db.Column(db.Float(5, 2))
+    qty = db.Column(db.Integer)
+    company = db.Column(db.String(64),  default="")
+    status = db.Column(db.String(64),  default="")
+    team = db.Column(db.String(64),  default="")
+    member = db.Column(db.String(64),  default="")
+    ordered = db.Column(db.Boolean, default=False)
+    arrived = db.Column(db.Boolean, default=False)
+    archived = db.Column(db.Boolean,  default=False)
+
+    def __repr__(self):
+        return '<Order %r>' % self.product
+
+
 class User(OutputMixin, UserMixin, db.Model):
     __tablename__='users'
     id = db.Column(db.Integer, primary_key=True)
